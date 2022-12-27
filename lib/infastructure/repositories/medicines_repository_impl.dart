@@ -4,13 +4,11 @@ import 'package:healsense/infastructure/core/utils/either.dart';
 import 'package:healsense/domain/core/error/failure_result.dart';
 import 'package:healsense/infastructure/data_sources/local/local_notifications_data_source/local_notifications_data_source.dart';
 import 'package:healsense/infastructure/data_sources/local/medicines_data_source/medicines_data_source.dart';
-import 'package:injectable/injectable.dart';
 
 import '../../domain/core/error/exceptions.dart';
 import '../../domain/repositories/medicines_repository.dart';
 import '../services/drift_service/drift_service.dart';
 
-@LazySingleton(as: MedicinesRepository)
 class MedicinesRepositoryImpl implements MedicinesRepository {
   MedicinesRepositoryImpl(
     this._medicinesDataSource,

@@ -7,12 +7,10 @@ import 'package:healsense/infastructure/data_sources/remote/current_location_dat
 import 'package:healsense/infastructure/data_sources/remote/location_permission_data_source/location_permission_data_source.dart';
 import 'package:healsense/infastructure/data_sources/remote/nearby_pharmacies_data_source/nearby_pharmacies_data_source.dart';
 import 'package:healsense/infastructure/models/nearby_pharmacies.dart';
-import 'package:injectable/injectable.dart';
 
 import '../../domain/core/error/exceptions.dart';
 import '../../domain/repositories/nearby_pharmacies_repository.dart';
 
-@LazySingleton(as: NearbyPharmaciesRepository)
 class NearbyPharmaciesRepositoryImpl implements NearbyPharmaciesRepository {
   NearbyPharmaciesRepositoryImpl(
     this._currentLocation,

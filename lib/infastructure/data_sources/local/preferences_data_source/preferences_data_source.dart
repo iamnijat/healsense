@@ -1,5 +1,5 @@
 abstract class PreferencesDataSource {
-  bool? get isIntroPageSeen;
+  Future<bool?> get isIntroPageSeen;
 
-  Future<bool> storeIntroPageSeen();
+  Future<bool?> storeIntroPageSeen();
 }

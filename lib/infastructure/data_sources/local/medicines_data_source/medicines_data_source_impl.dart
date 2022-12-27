@@ -1,9 +1,7 @@
 import 'package:healsense/infastructure/services/drift_service/drift_service.dart';
-import 'package:injectable/injectable.dart';
 import '../../../core/utils/date_format_util.dart';
 import 'medicines_data_source.dart';
 
-@LazySingleton(as: MedicinesDataSource)
 class MedicinesDataSourceImpl implements MedicinesDataSource {
   final DriftService _drift;
 

@@ -8,11 +8,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'app.dart';
-import 'domain/repositories/local_notifications_repository.dart';
 import 'infastructure/core/constants/palette.dart';
 import 'infastructure/core/utils/environment_var_util.dart';
 import 'infastructure/core/utils/timezone_util.dart';
-import 'di/di.dart';
 
 class AppConfigs {
   const AppConfigs._();
@@ -41,11 +39,7 @@ class AppConfigs {
   static Future<void> _init() async {
     await EnvironmentVarUtil.loadEnv();
 
-    await setupLocator();
-
     TimezoneUtil.initTimeZones();
-
-    await getIt<LocalNotificationsRepository>().initializeNotification();
   }
 
   static void _buildFimberTree() {

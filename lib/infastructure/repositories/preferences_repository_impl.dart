@@ -1,12 +1,10 @@
 import 'package:healsense/domain/core/error/exceptions.dart';
 import 'package:healsense/domain/core/error/failure_result.dart';
-import 'package:injectable/injectable.dart';
 
 import '../core/utils/either.dart';
 import '../../domain/repositories/preferences_repository.dart';
 import '../data_sources/local/preferences_data_source/preferences_data_source.dart';
 
-@LazySingleton(as: PreferencesRepository)
 class PreferencesRepositoryImpl implements PreferencesRepository {
   PreferencesRepositoryImpl(this._dataSource);
 
@@ -23,9 +21,9 @@ class PreferencesRepositoryImpl implements PreferencesRepository {
   }
 
   @override
-  Either<FailureResult, bool?> get isIntroPageSeen {
+  Future<Either<FailureResult, bool?>> get isIntroPageSeen async {
     try {
-      final isIntroPageSeen = _dataSource.isIntroPageSeen;
+      final isIntroPageSeen = await _dataSource.isIntroPageSeen;
       return Success(isIntroPageSeen);
     } catch (_) {
       return Error(FailureResult(ex: SharedPreferencesException()));

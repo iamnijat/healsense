@@ -5,7 +5,9 @@ import '../notifier/splash_page_state_notifier.dart';
 
 final splashPageProvider =
     StateNotifierProvider<SplashPageStateNotifier, SplashPageState>(
-  (_) => SplashPageStateNotifier(
-    preferencesRepository: getIt(),
+  (ref) => SplashPageStateNotifier(
+    preferencesRepository: ref.watch(
+      preferencesRepositoryProvider,
+    ),
   ),
 );

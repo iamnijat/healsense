@@ -12,7 +12,9 @@ final introPageSliderProvider =
   final context = goRouter.routerDelegate.navigatorKey.currentContext;
 
   return IntroPageStateNotifier(
-    preferencesRepository: getIt(),
+    preferencesRepository: ref.watch(
+      preferencesRepositoryProvider,
+    ),
     loc: context?.loc,
   );
 });
