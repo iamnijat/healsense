@@ -9,7 +9,9 @@ final medicinesByDateProvider = StateNotifierProvider.autoDispose<
     MedicinesByDateStateNotifier, MedicinesByDateState>((ref) {
   final date = ref.watch(datePickerTimelineProvider);
   return MedicinesByDateStateNotifier(
-    medicinesRepository: getIt(),
+    medicinesRepository: ref.watch(
+      medicinesRepositoryProvider,
+    ),
     date: date,
   );
 });

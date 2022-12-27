@@ -4,8 +4,8 @@ import '../../../../di/di.dart';
 import '../notifier/delete_medicine_state_notifier.dart';
 
 final deleteMedicineProvider = StateNotifierProvider.autoDispose<
-    DeleteMedicineStateNotifier, DeleteMedicineState>((_) {
+    DeleteMedicineStateNotifier, DeleteMedicineState>((ref) {
   return DeleteMedicineStateNotifier(
-    medicinesRepository: getIt(),
+    medicinesRepository: ref.watch(medicinesRepositoryProvider),
   );
 });

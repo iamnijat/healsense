@@ -5,8 +5,8 @@ import '../../../../di/di.dart';
 import '../state/create_medicine_form_state.dart';
 
 final createMedicineProvider = StateNotifierProvider.autoDispose<
-    CreateMedicineStateNotifier, CreateMedicineFormState>((_) {
+    CreateMedicineStateNotifier, CreateMedicineFormState>((ref) {
   return CreateMedicineStateNotifier(
-    medicinesRepository: getIt(),
+    medicinesRepository: ref.watch(medicinesRepositoryProvider),
   );
 });

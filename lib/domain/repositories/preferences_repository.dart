@@ -5,5 +5,5 @@ import '../../infastructure/core/utils/either.dart';
 abstract class PreferencesRepository {
   Future<Either<FailureResult, Unit>> storeIntroPageSeen();
 
-  Either<FailureResult, bool?> get isIntroPageSeen;
+  Future<Either<FailureResult, bool?>> get isIntroPageSeen;
 }

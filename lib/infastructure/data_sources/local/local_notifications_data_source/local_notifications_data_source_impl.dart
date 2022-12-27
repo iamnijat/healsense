@@ -1,10 +1,8 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:healsense/infastructure/core/extensions/log.dart';
-import 'package:injectable/injectable.dart';
 import '../../../core/utils/timezone_util.dart';
 import 'local_notifications_data_source.dart';
 
-@LazySingleton(as: LocalNotificationsDataSource)
 class LocalNotificationsDataSourceImpl implements LocalNotificationsDataSource {
   late FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin;
   late AndroidInitializationSettings _androidInitializationSettings;

@@ -19,7 +19,7 @@ class SplashPageStateNotifier extends StateNotifier<SplashPageState> {
 
     await _addDelay();
 
-    final result = preferencesRepository.isIntroPageSeen;
+    final result = await preferencesRepository.isIntroPageSeen;
 
     result.when(error: (_) {
       state = const SplashPageState.error();

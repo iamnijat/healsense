@@ -6,7 +6,12 @@ import '../notifier/nearby_pharmacies_state_notifier.dart';
 
 final nearbyPharmaciesProvider =
     StateNotifierProvider<NearbyPharmaciesStateNotifier, NearbyPharmaciesState>(
-  (_) => NearbyPharmaciesStateNotifier(
-    nearbyPharmaciesRepository: getIt(),
+  (
+    ref,
+  ) =>
+      NearbyPharmaciesStateNotifier(
+    nearbyPharmaciesRepository: ref.watch(
+      nearbyPharmaciesRepositoryProvider,
+    ),
   ),
 );

@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 publish_to: "none"
 
-version: 1.0.0+4
+version: 1.0.0+5
 
 environment:
   sdk: ">=2.18.4 <3.0.0"
@@ -23,11 +23,9 @@ dependencies:
   fpdart: ^0.4.0
   freezed_annotation: ^2.2.0
   geolocator: ^9.0.2
-  get_it: ^7.2.0
   go_router: ^5.2.4
   google_maps_flutter: ^2.2.2
   http: ^0.13.5
-  injectable: ^2.1.0
   intl: ^0.17.0
   json_annotation: ^4.7.0
   nil: ^1.1.1
@@ -50,7 +48,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.3.2
-  injectable_generator: ^2.1.3
   json_serializable: ^6.5.4
   riverpod_generator: ^1.0.6
 flutter_icons:

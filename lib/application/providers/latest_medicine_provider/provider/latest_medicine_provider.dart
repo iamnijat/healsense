@@ -5,8 +5,10 @@ import '../notifier/latest_medicine_state_notifier.dart';
 import '../state/latest_medicine_state.dart';
 
 final latestMedicineProvider = StateNotifierProvider.autoDispose<
-    LatestMedicineStateNotifier, LatestMedicineState>((_) {
+    LatestMedicineStateNotifier, LatestMedicineState>((ref) {
   return LatestMedicineStateNotifier(
-    medicinesRepository: getIt(),
+    medicinesRepository: ref.watch(
+      medicinesRepositoryProvider,
+    ),
   );
 });

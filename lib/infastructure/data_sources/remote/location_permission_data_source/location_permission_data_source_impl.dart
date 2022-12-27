@@ -1,9 +1,7 @@
 import 'package:geolocator/geolocator.dart';
-import 'package:injectable/injectable.dart';
 
 import 'location_permission_data_source.dart';
 
-@LazySingleton(as: LocationPermissionDataSource)
 class LocationPermissionDataSourceImpl implements LocationPermissionDataSource {
   @override
   Future<bool> get hasPermission async {

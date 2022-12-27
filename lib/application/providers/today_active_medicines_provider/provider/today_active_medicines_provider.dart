@@ -5,8 +5,12 @@ import '../notifier/today_active_medicines_state_notifier.dart';
 import '../state/today_active_medicines_state.dart';
 
 final todayActiveMedicinesProvider = StateNotifierProvider.autoDispose<
-    TodayActiveMedicinesStateNotifier, TodayActiveMedicinesState>((_) {
+    TodayActiveMedicinesStateNotifier, TodayActiveMedicinesState>((
+  ref,
+) {
   return TodayActiveMedicinesStateNotifier(
-    medicinesRepository: getIt(),
+    medicinesRepository: ref.watch(
+      medicinesRepositoryProvider,
+    ),
   );
 });

@@ -1,21 +1,26 @@
-import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'preferences_data_source.dart';
 
-@LazySingleton(as: PreferencesDataSource)
 class PreferencesDataSourceImpl implements PreferencesDataSource {
-  PreferencesDataSourceImpl(this._preferences);
-
-  final SharedPreferences _preferences;
+  SharedPreferences? _sp;
 
   @override
-  bool? get isIntroPageSeen =>
-      _preferences.getBool(SharedPreferencesKeys.introPageSeen);
+  Future<bool?> get isIntroPageSeen async {
+    var sp = await _init();
+    return sp?.getBool(SharedPreferencesKeys.introPageSeen);
+  }
 
   @override
-  Future<bool> storeIntroPageSeen() async =>
-      await _preferences.setBool(SharedPreferencesKeys.introPageSeen, true);
+  Future<bool?> storeIntroPageSeen() async {
+    var sp = await _init();
+    return await sp?.setBool(SharedPreferencesKeys.introPageSeen, true);
+  }
+
+  Future<SharedPreferences?> _init() async {
+    _sp = await SharedPreferences.getInstance();
+    return _sp;
+  }
 }
 
 class SharedPreferencesKeys {

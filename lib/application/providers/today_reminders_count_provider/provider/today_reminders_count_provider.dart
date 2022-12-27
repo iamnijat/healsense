@@ -5,8 +5,10 @@ import '../notifier/today_reminders_count_state_notifier.dart';
 import '../state/today_reminders_count_state.dart';
 
 final todayRemindersCountProvider = StateNotifierProvider.autoDispose<
-    TodayRemindersCountStateNotifier, TodayRemindersCountState>((_) {
+    TodayRemindersCountStateNotifier, TodayRemindersCountState>((ref) {
   return TodayRemindersCountStateNotifier(
-    medicinesRepository: getIt(),
+    medicinesRepository: ref.watch(
+      medicinesRepositoryProvider,
+    ),
   );
 });
