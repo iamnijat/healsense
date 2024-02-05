@@ -25,7 +25,7 @@ class CalendarDatePickerTimeline extends ConsumerWidget {
           const VerticalSpacer(15),
           DatePickerTimeline(
             DateFormatUtil.initialDate,
-            height: 105.h,
+            height: 125.h,
             onDateChange: (selectedDate) => _selectDate(
               ref,
               selectedDate,

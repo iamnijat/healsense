@@ -10,7 +10,7 @@ class CalendarYear extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
-        duration: Durations.twoHundredMillisecondsDuration,
+        duration: DurationsUtil.twoHundredMillisecondsDuration,
         transitionBuilder: (Widget child, Animation<double> animation) =>
             ScaleTransition(
               scale: animation,

@@ -36,6 +36,7 @@ String $isTodayReminderExistHash() =>
 final isTodayReminderExistProvider = AutoDisposeProvider<bool>(
   isTodayReminderExist,
   name: r'isTodayReminderExistProvider',
+  // ignore: deprecated_member_use
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : $isTodayReminderExistHash,

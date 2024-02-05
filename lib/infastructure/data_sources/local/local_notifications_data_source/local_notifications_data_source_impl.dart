@@ -60,7 +60,6 @@ class LocalNotificationsDataSourceImpl implements LocalNotificationsDataSource {
       title,
       body,
       TimezoneUtil.convertTimezone(dateTime),
-      matchDateTimeComponents: DateTimeComponents.time,
       notificationDetails,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,

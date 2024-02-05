@@ -20,7 +20,7 @@ class CreateMedicineStateNotifier
   Future<void> createMedicine({required bool isNotified}) async {
     state = state.copyWith(isLoading: true);
 
-    await _addDelay(Durations.eightHundredMillisecondsDuration);
+    await _addDelay(DurationsUtil.eightHundredMillisecondsDuration);
 
     final entity = MedicineCompanion(
       name: Value(state.name.value),

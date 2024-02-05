@@ -3,13 +3,13 @@ description: A new Flutter project.
 
 publish_to: "none"
 
-version: 1.0.0+5
+version: 1.0.0+7
 
 environment:
   sdk: ">=2.18.4 <3.0.0"
 
 dependencies:
-  badges: ^2.0.3
+  badges: ^3.0.0
   cupertino_icons: ^1.0.5
   drift: ^2.3.0
   equatable: ^2.0.5
@@ -18,7 +18,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.1.1
-  flutter_screenutil: ^5.6.0
+  flutter_screenutil: ^5.9.0
   flutter_svg_provider: ^1.0.3
   fpdart: ^0.4.0
   freezed_annotation: ^2.2.0
@@ -26,7 +26,7 @@ dependencies:
   go_router: ^5.2.4
   google_maps_flutter: ^2.2.2
   http: ^0.13.5
-  intl: ^0.17.0
+  intl: ^0.18.1
   json_annotation: ^4.7.0
   nil: ^1.1.1
   path: ^1.8.2
@@ -35,7 +35,7 @@ dependencies:
   rxdart: ^0.27.7
   shared_preferences: ^2.0.15
   shimmer: ^2.0.0
-  sqlite3_flutter_libs: ^0.5.12
+  sqlite3_flutter_libs: ^0.5.20
   timezone: ^0.9.0
   url_launcher: ^6.1.7
 

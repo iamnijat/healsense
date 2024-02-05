@@ -1,6 +1,5 @@
 library widgets;
 
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -8,7 +7,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 import 'package:healsense/application/providers/create_medicine_provider/provider/create_medicine_provider.dart';
 import 'package:healsense/application/providers/delete_medicine_provider/provider/delete_medicine_provider.dart';
-import 'package:healsense/application/providers/is_today_reminder_exist_provider/is_today_reminder_exist_provider.dart';
 import 'package:healsense/application/providers/latest_medicine_provider/provider/latest_medicine_provider.dart';
 import 'package:healsense/application/providers/today_active_medicines_provider/provider/today_active_medicines_provider.dart';
 import 'package:healsense/application/providers/today_reminders_count_provider/provider/today_reminders_count_provider.dart';

@@ -29,7 +29,7 @@ class _IntroPageSliderButtonState extends State<IntroPageSliderButton>
 
     _animationController = AnimationController(
       vsync: this,
-      duration: Durations.sixHundredMillisecondsDuration,
+      duration: DurationsUtil.sixHundredMillisecondsDuration,
     );
 
     _curve = CurvedAnimation(

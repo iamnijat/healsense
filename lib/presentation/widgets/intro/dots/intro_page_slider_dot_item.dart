@@ -8,7 +8,7 @@ class IntroPageSliderDotItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Durations.twoHundredMillisecondsDuration,
+      duration: DurationsUtil.twoHundredMillisecondsDuration,
       margin: _innerMargin,
       height: 8.h,
       width: _dotWidth,

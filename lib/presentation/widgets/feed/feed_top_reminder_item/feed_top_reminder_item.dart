@@ -21,25 +21,25 @@ class FeedTopReminderItem extends StatelessWidget {
                 size: 27.h,
               ),
             ),
-            Consumer(builder: (_, ref, __) {
-              final isReminderExist = ref.watch(
-                isTodayReminderExistProvider,
-              );
-              return Positioned(
-                left: 22.w,
-                bottom: 29.h,
-                child: Badge(
-                  toAnimate: true,
-                  showBadge: isReminderExist,
-                  shape: BadgeShape.square,
-                  position: BadgePosition.topEnd(),
-                  animationType: BadgeAnimationType.scale,
-                  animationDuration: Durations.twoHundredMillisecondsDuration,
-                  badgeColor: AppPalette.mainPurpleColor,
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              );
-            }),
+            // Consumer(builder: (_, ref, __) {
+            //   final isReminderExist = ref.watch(
+            //     isTodayReminderExistProvider,
+            //   );
+            //   return Positioned(
+            //     left: 22.w,
+            //     bottom: 29.h,
+            //     child: Badge(
+            //       toAnimate: true,
+            //       showBadge: isReminderExist,
+            //       shape: BadgeShape.square,
+            //       position: BadgePosition.topEnd(),
+            //       animationType: BadgeAnimationType.scale,
+            //       animationDuration: Durations.twoHundredMillisecondsDuration,
+            //       badgeColor: AppPalette.mainPurpleColor,
+            //       borderRadius: BorderRadius.circular(30),
+            //     ),
+            //   );
+            // }),
           ]),
     );
   }

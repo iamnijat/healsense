@@ -10,7 +10,7 @@ class JumpingDotsIndicator extends StatelessWidget {
       radius: 4.5,
       numberOfDots: 3,
       innerPadding: 3,
-      animationDuration: Durations.twoHundredMillisecondsDuration,
+      animationDuration: DurationsUtil.twoHundredMillisecondsDuration,
     );
   }
 }
