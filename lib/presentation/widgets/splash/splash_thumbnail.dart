@@ -8,7 +8,7 @@ class SplashThumbnail extends StatelessWidget {
     return Center(
         child: TweenAnimationBuilder<double>(
             tween: Tween(begin: 0.5, end: 1.0),
-            duration: Durations.oneSecondDuration,
+            duration: DurationsUtil.oneSecondDuration,
             child: Container(
               width: 320.h,
               height: 320.h,

@@ -14,8 +14,8 @@ class CalendarActivityDismissible extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      movementDuration: Durations.oneSecondDuration,
-      resizeDuration: Durations.sixHundredMillisecondsDuration,
+      movementDuration: DurationsUtil.oneSecondDuration,
+      resizeDuration: DurationsUtil.sixHundredMillisecondsDuration,
       onDismissed: (direction) => onDismissTap(),
       background: const CalendarActivityDismissibleLeftTransition(),
       key: ValueKey('$id'),

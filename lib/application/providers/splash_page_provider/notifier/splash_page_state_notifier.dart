@@ -31,6 +31,6 @@ class SplashPageStateNotifier extends StateNotifier<SplashPageState> {
   }
 
   _addDelay() async => await Future.delayed(
-        Durations.oneSecondDuration,
+        DurationsUtil.oneSecondDuration,
       );
 }

@@ -7,8 +7,8 @@ import Foundation
 
 import flutter_local_notifications
 import geolocator_apple
-import path_provider_macos
-import shared_preferences_macos
+import path_provider_foundation
+import shared_preferences_foundation
 import sqlite3_flutter_libs
 import url_launcher_macos
 

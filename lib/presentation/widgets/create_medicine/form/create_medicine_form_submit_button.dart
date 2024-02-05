@@ -18,7 +18,7 @@ class CreateMedicineFormSubmitButton extends StatelessWidget {
       child: AnimatedContainer(
         width: context.width,
         height: 60.h,
-        duration: Durations.threeHundredMillisecondsDuration,
+        duration: DurationsUtil.threeHundredMillisecondsDuration,
         decoration: BoxDecoration(
             color: isDisabled
                 ? AppPalette.mainGreyColor

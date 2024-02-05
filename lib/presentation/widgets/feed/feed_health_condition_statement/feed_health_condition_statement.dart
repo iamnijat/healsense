@@ -18,7 +18,7 @@ class FeedHealthConditionStatement extends StatelessWidget {
           bottom: -35.h,
           child: TweenAnimationBuilder<double>(
             tween: Tween(begin: 1.0, end: 0.0),
-            duration: Durations.sixHundredMillisecondsDuration,
+            duration: DurationsUtil.sixHundredMillisecondsDuration,
             builder: (context, value, child) {
               return Transform.translate(
                 offset: Offset(0.0, -100 * value),

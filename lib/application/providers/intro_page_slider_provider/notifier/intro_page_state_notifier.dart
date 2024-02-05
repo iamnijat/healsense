@@ -37,7 +37,7 @@ class IntroPageStateNotifier extends StateNotifier<IntroPageState> {
 
     final result = await preferencesRepository.storeIntroPageSeen();
 
-    await _addDelay(Durations.eightHundredMillisecondsDuration);
+    await _addDelay(DurationsUtil.eightHundredMillisecondsDuration);
 
     if (result.isSuccess()) {
       Fimber.d('Successfully navigated to home page');
@@ -68,13 +68,13 @@ class IntroPageStateNotifier extends StateNotifier<IntroPageState> {
   void animateToNextPage(int index) {
     if (slidersCount != index) {
       pageController.animateToPage(index,
-          duration: Durations.eightHundredMillisecondsDuration,
+          duration: DurationsUtil.eightHundredMillisecondsDuration,
           curve: Curves.fastOutSlowIn);
     }
   }
 
   void autoAnimateToNextPage() {
-    Timer.periodic(Durations.sevenSecondsDuration, (Timer timer) {
+    Timer.periodic(DurationsUtil.sevenSecondsDuration, (Timer timer) {
       if (_currentPage < slidersCount - 1) {
         _currentPage++;
       } else if (_currentPage == slidersCount - 1) {
