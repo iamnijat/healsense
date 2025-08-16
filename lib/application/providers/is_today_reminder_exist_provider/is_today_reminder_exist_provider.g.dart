@@ -29,16 +29,15 @@ class _SystemHash {
   }
 }
 
-String $isTodayReminderExistHash() =>
+String _$isTodayReminderExistHash() =>
     r'608ffad0daf0db5df4e48779e1b05d9291bb815a';
 
 /// See also [isTodayReminderExist].
 final isTodayReminderExistProvider = AutoDisposeProvider<bool>(
   isTodayReminderExist,
   name: r'isTodayReminderExistProvider',
-  // ignore: deprecated_member_use
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : $isTodayReminderExistHash,
+      : _$isTodayReminderExistHash,
 );
 typedef IsTodayReminderExistRef = AutoDisposeProviderRef<bool>;

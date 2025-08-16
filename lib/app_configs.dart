@@ -40,6 +40,17 @@ class AppConfigs {
     await EnvironmentVarUtil.loadEnv();
 
     TimezoneUtil.initTimeZones();
+
+    // Initialize Google Maps with API key for iOS
+    final googleMapsApiKey = EnvironmentVarUtil.googleMapsApiKey;
+    if (googleMapsApiKey != null && googleMapsApiKey.isNotEmpty) {
+      try {
+        const platform = MethodChannel('com.healsense.googlemaps');
+        await platform.invokeMethod('setApiKey', {'apiKey': googleMapsApiKey});
+      } catch (e) {
+        Fimber.w('Failed to set Google Maps API key: $e');
+      }
+    }
   }
 
   static void _buildFimberTree() {

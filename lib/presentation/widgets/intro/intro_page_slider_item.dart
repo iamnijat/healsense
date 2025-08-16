@@ -41,6 +41,10 @@ class IntroPageSliderItem extends StatelessWidget {
         isLoading: state.isLoading,
         mounted: mounted,
       ),
+      Padding(
+        padding:
+            EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
+      ),
     ]);
   }
 }
