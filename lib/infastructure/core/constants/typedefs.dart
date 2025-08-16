@@ -1,5 +1,4 @@
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'
-    show AppLocalizations;
+import 'package:healsense/l10n/app_localizations.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:healsense/domain/core/error/failure_result.dart';
 import 'package:healsense/domain/core/success/success_result.dart';

@@ -3,7 +3,7 @@ import Flutter
 import GoogleMaps
 import flutter_config
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
   override func application(
     _ application: UIApplication,

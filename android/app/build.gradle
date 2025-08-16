@@ -69,6 +69,7 @@ def keystoreProperties = new Properties()
            storePassword keystoreProperties['storePassword']
        }
    }
+   
    buildTypes {
        release {
            signingConfig signingConfigs.release
