@@ -13,8 +13,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppPalette.whiteColor,
       body: child,
-      bottomNavigationBar: CustomBottomNavigationBar(
-        loc: context.loc,
+      bottomNavigationBar: SafeArea(
+        child: CustomBottomNavigationBar(
+          loc: context.loc,
+        ),
       ),
     );
   }

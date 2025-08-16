@@ -19,7 +19,7 @@ class FeedPharmaciesNearbyPlaces extends ConsumerWidget {
         loaded: (nearbyPlaces) {
           final places = nearbyPlaces?.results;
           return SizedBox(
-            height: 230.h,
+            height: 270.h,
             child: ListView.builder(
               itemCount: places?.length,
               shrinkWrap: true,

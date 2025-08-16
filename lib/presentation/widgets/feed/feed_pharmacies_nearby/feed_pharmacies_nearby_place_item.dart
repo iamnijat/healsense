@@ -23,7 +23,7 @@ class FeedPharmaciesNearbyPlaceItem extends StatelessWidget {
         _launchUrl(url);
       },
       child: Container(
-        height: 150.h,
+        height: 200.h,
         width: 150.w,
         color: AppPalette.whiteColor,
         margin: _innerMargin(index),

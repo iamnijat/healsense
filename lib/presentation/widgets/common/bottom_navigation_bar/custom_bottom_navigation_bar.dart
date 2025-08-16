@@ -10,41 +10,44 @@ class CustomBottomNavigationBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(navigationTabProvider);
-    return FancyBottomNavigationBar(
-      selectedIndex: index,
-      backgroundColor: AppPalette.whiteColor,
-      color: AppPalette.blackColor,
-      activeColor: AppPalette.whiteColor,
-      tabBackgroundColor: AppPalette.mainPurpleColor,
-      gap: 8,
-      padding: Paddings.all14Padding,
-      onTabChange: (value) {
-        _onTap(
-          value,
-          ref: ref,
-          context: context,
-        );
-      },
-      tabs: [
-        FancyButton(
-          icon: Icons.dashboard_rounded,
-          text: loc?.bottomNavigationBarFeedText ?? '',
-          iconSize: 24.h,
-          textStyle: TextStyles.white14BoldMontserrat,
-        ),
-        FancyButton(
-          icon: Icons.add_rounded,
-          text: loc?.bottomNavigationBarNewText ?? '',
-          iconSize: 24.h,
-          textStyle: TextStyles.white14BoldMontserrat,
-        ),
-        FancyButton(
-          icon: Icons.calendar_month_rounded,
-          text: loc?.bottomNavigationBarCalendarText ?? '',
-          iconSize: 24.h,
-          textStyle: TextStyles.white14BoldMontserrat,
-        ),
-      ],
+    return Container(
+      padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
+      child: FancyBottomNavigationBar(
+        selectedIndex: index,
+        backgroundColor: AppPalette.whiteColor,
+        color: AppPalette.blackColor,
+        activeColor: AppPalette.whiteColor,
+        tabBackgroundColor: AppPalette.mainPurpleColor,
+        gap: 8,
+        padding: Paddings.all14Padding,
+        onTabChange: (value) {
+          _onTap(
+            value,
+            ref: ref,
+            context: context,
+          );
+        },
+        tabs: [
+          FancyButton(
+            icon: Icons.dashboard_rounded,
+            text: loc?.bottomNavigationBarFeedText ?? '',
+            iconSize: 24.h,
+            textStyle: TextStyles.white14BoldMontserrat,
+          ),
+          FancyButton(
+            icon: Icons.add_rounded,
+            text: loc?.bottomNavigationBarNewText ?? '',
+            iconSize: 24.h,
+            textStyle: TextStyles.white14BoldMontserrat,
+          ),
+          FancyButton(
+            icon: Icons.calendar_month_rounded,
+            text: loc?.bottomNavigationBarCalendarText ?? '',
+            iconSize: 24.h,
+            textStyle: TextStyles.white14BoldMontserrat,
+          ),
+        ],
+      ),
     );
   }
 

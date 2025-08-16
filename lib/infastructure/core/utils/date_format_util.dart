@@ -63,5 +63,5 @@ class DateFormatUtil {
 
   static DateTime get dateTimeNow => DateTime.now();
 
-  static DateTime get initialDate => DateTime(2022, 12, 06);
+  static DateTime get initialDate => DateTime.now();
 }
