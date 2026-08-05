@@ -30,7 +30,7 @@ def keystoreProperties = new Properties()
 
    android {
     namespace 'healsense.reminder.app'
-    compileSdkVersion 35
+    compileSdkVersion 36
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -50,7 +50,7 @@ def keystoreProperties = new Properties()
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "healsense.reminder.app"
         minSdkVersion flutter.minSdkVersion
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
